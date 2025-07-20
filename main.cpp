@@ -1,10 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 핑크빈은 점수가 높아도 패스를 하지 않는다.
-// 	-> 패스를 하는건 상대방에게 점수를 더 주는 행위기 때문에 하지 않음
-// 
-
 class Game
 {
 private:
