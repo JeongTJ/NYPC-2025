@@ -590,7 +590,7 @@ public:
 			}
 		// cout << "=== 해당 수를 진행 한 후 결과 ===" << '\n';
 		// cout << r1 << ' ' << c1 << ' ' << r2 << ' ' << c2 << '\n';
-		// print_board();
+		print_board();
 		if (myScore < 0) {
 			cout << "!!! myScore 가 음수가 되는 이상한 경우 !!!" << '\n';
 			exit(1);
@@ -611,24 +611,14 @@ public:
 		for (int i = 0; i < 10; i++) {
 			cout << ' ' << i << ' ' << ' ';
 			for (int j = 0; j < 17; j++) {
+				if (score[i][j] == 1) cout << "\033[0;34m";
+				else if (score[i][j] == 2) cout << "\033[0;31m";
 				cout << "[" << board[i][j] << "] ";
+				cout << "\033[0m";
 			}
 			cout << '\n';
 		}
 		cout << "\n";
-		
-		cout << "   " << ' ';
-		for (int i = 0; i < 17; i++) {
-			cout << ' ' << i % 10 << ' ' << ' ';
-		}
-		cout << '\n';
-		for (int i = 0; i < 10; i++) {
-			cout << ' ' << i << ' ' << ' ';
-			for (int j = 0; j < 17; j++) {
-				cout << "[" << score[i][j] << "] ";
-			}
-			cout << '\n';
-		}
 		cout << myScore << ' ' << enemyScore << '\n';
 		cout << endl;
 	}
